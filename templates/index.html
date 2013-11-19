@@ -1,0 +1,36 @@
+
+{% extends "base.html" %}
+{% block account %}
+<form class="navbar-form navbar-right" method="POST" action="/login">
+  <div class="form-group">
+    <input type="text" id="loginemail" placeholder="Email" class="form-control" name="username" required autofocus>
+  </div>
+  <div class="form-group">
+    <input type="password" id="loginepassword" placeholder="Password" class="form-control" name="password" required>
+  </div>
+  <button type="submit" class="btn btn-success">Sign in</button>
+</form>
+{% endblock %}
+{% block content %}
+    <div class="row jumbotron">
+      <div class="col-md-6">
+        <h1>My Note!</h1>
+        <p>My Note</p>
+        <p></p>
+      </div>
+      <div class="col-md-2"></div>
+      <div class="col-md-4">
+      <form class="form-signin" method ="POST" action="/regist">
+        <h2 class="form-signin-heading">Regist</h2>
+        <div class="form-group">
+        <label for="registemail">Email address</label>
+        <input type="text" class="form-control" id="registemail" placeholder="Email" name="username" required>
+        <label for="registpassword">Password</label>
+        <input type="password" class="form-control" id="registpassword" placeholder="Password" name="password" required>
+        </div>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Regist</button>
+      </form>
+      </div>
+    </div>
+{% endblock %}
+{% block js %}{% endblock %}
